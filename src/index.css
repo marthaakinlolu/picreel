@@ -14,3 +14,13 @@ code {
 .logo {
   margin-top: 9px;
 }
+.cards {
+  margin: 10px;
+}
+.card-segment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
