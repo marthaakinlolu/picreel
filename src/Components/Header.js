@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 import { Toolbar } from "@material-ui/core";
-import logo from '../Images/logo-reel.PNG'
+import logo from '../Images/logo.PNG'
 import img from "../Images/avatar.jpg"
 
 
@@ -55,7 +55,7 @@ export default function Header() {
           <Toolbar>
           <Grid container spacing={2}>
             <Grid item xs={3}>
-              <img src={logo} alt="picreel-logo" width='80px' className="llogo"/>
+              <img src={logo} alt="picreel-logo" width='80px' className="logo"/>
             </Grid>
             <Grid item xs={4}>
               <Search>
