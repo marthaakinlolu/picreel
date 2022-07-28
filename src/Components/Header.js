@@ -6,9 +6,13 @@ import { styled, alpha } from '@mui/material/styles';
 import { Toolbar } from "@material-ui/core";
 import logo from '../Images/logo.PNG'
 import img from "../Images/avatar.jpg"
+import FileUploader from "../pages/uploadFile";
+import {NavLink} from "react-router-dom";
+
 
 
 export default function Header() {
+  
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -48,34 +52,36 @@ export default function Header() {
           },
         },
       }));
-
+      
     return(
         <AppBar position="static">
           <Container maxWidth="xl" className="container">
-          <Toolbar>
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <img src={logo} alt="picreel-logo" width='80px' className="logo"/>
-            </Grid>
-            <Grid item xs={4}>
-              <Search>
-                  <SearchIconWrapper>
-                  <SearchIcon />
-                  </SearchIconWrapper>
-                  <StyledInputBase
-                    placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
-                  />
-            </Search>
-            </Grid>
-            <Grid item xs={3}>
-              <Button color="inherit">UPLOAD</Button>
-            </Grid>
-            <Grid item xs={2}>
-              <Avatar alt="Martha" src={img} />
-            </Grid>
-          </Grid>
-          </Toolbar>
+            <Toolbar>
+              <Grid container spacing={2}>
+                <Grid item xs={3}>
+                  <img src={logo} alt="picreel-logo" width='80px' className="logo"/>
+                </Grid>
+                <Grid item xs={4}>
+                  <Search>
+                      <SearchIconWrapper>
+                      <SearchIcon />
+                      </SearchIconWrapper>
+                      <StyledInputBase
+                        placeholder="Search…"
+                        inputProps={{ 'aria-label': 'search' }}
+                      />
+                  </Search>
+                </Grid>
+                <Grid item xs={3}>
+                  <NavLink to="/uploadFile" className="link-style">
+                      <Button color="inherit">UPLOAD</Button>
+                  </NavLink>
+                </Grid>
+                <Grid item xs={2}>
+                  <Avatar alt="Martha" src={img} />
+                </Grid>
+              </Grid>
+            </Toolbar>
           </Container>
         </AppBar>
     )

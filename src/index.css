@@ -15,12 +15,39 @@ code {
   margin-top: 9px;
 }
 .cards {
-  margin: 10px;
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 .card-segment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+    overflow-x: auto;
+}
+.link-style {
+  color: white;
+  text-decoration: none;
+}
+.upload-cont {
+  height: 500px;
+  margin: 50px;
+  padding: 20px;
+}
+.upload-file {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
