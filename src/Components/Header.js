@@ -6,7 +6,6 @@ import { styled, alpha } from '@mui/material/styles';
 import { Toolbar } from "@material-ui/core";
 import logo from '../Images/logo.PNG'
 import img from "../Images/avatar.jpg"
-import FileUploader from "../pages/uploadFile";
 import {NavLink} from "react-router-dom";
 
 
@@ -74,7 +73,7 @@ export default function Header() {
                 </Grid>
                 <Grid item xs={3}>
                   <NavLink to="/uploadFile" className="link-style">
-                      <Button color="inherit">UPLOAD</Button>
+                      <Button color="inherit">UPLOAD AN IMAGE</Button>
                   </NavLink>
                 </Grid>
                 <Grid item xs={2}>

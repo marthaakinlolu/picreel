@@ -20,7 +20,8 @@ code {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 30px;
+
 }
 .card-segment {
     display: flex;
@@ -35,9 +36,14 @@ code {
   text-decoration: none;
 }
 .upload-cont {
+  width: 300px;
   height: 500px;
-  margin: 50px;
+  margin: 50px auto;
   padding: 20px;
+  font-weight: bold;
+  color: #0583d2;
+  text-align: center;
+
 }
 .upload-file {
   display: flex;

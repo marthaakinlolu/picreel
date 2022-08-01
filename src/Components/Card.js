@@ -5,20 +5,20 @@ import ShareIcon from '@mui/icons-material/Share';
 import { Comment } from "@mui/icons-material";
 import moment from "moment";
 
-export default function card(props) {
+export default function card({avatar,name,image}) {
     const date = moment().format('LL');
     // const date = `${current.getMonth()+1} ${current.getDate()}, ${current.getFullYear()}`;
     return( 
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
-                avatar= {<Avatar alt="Martha" src={props.avatar} />}
-                title= {props.name}
+                avatar= {<Avatar alt="Martha" src={avatar} />}
+                title= {name}
                 subheader={date}
             />
             <CardMedia
                 component="img"
                 height="194"
-                image={props.image}
+                image={image}
                 alt="Paella dish"
             />
             <CardActions disableSpacing>
