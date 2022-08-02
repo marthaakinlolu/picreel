@@ -1,74 +1,74 @@
 export const data = [
     {
-        avatar: "avatar",
+        avatar: "../Images/avatar.jpg",
         name: "Martha Akinlolu",
-        image: "avatar.jpg"
+        image: '../Images/avatar.jpg'
     },
 
     {
-        avatar: "image.jpeg",
+        avatar: "../Images/image.jpeg",
         name: "Mary Ojo",
-        image: "image.jpeg"
+        image: "../Images/image.jpeg"
     },
 
     {
-        avatar: "lady.jpeg",
+        avatar: "../Images/lady.jpeg",
         name: "Martha Akinlolu",
-        image: "lady.jpeg"
+        image: "../Images/lady.jpeg"
     },
 
     {
-        avatar: "me.jpg",
+        avatar: "../Images/me.jpg",
         name: "Mary Ojo",
-        image: "me.jpg"
+        image: "../Images/me.jpg"
     },
 
     {
-        avatar: "you.jpg",
+        avatar: "../Images/you.jpg",
         name: "Martha Akinlolu",
-        image: "you.jpg"
+        image: "../Images/you.jpg"
     },
 
     {
-        avatar: "me.jpg",
+        avatar: "../Images/me.jpg",
         name: "Mary Ojo",
-        image: "me.jpg"
+        image: "../Images/me.jpg"
     },
 
     {
-        avatar: "you.jpg",
+        avatar: "../Images/you.jpg",
         name: "Martha Akinlolu",
-        image: "you.jpg"
+        image: "../Images/you.jpg"
     },
 
     {
-        avatar: "lady.jpg",
+        avatar: "../Images/lady.jpg",
         name: "Mary Ojo",
-        image: "lady.jpg"
+        image: "../Images/lady.jpg"
     },
 
     {
-        avatar: "image.jpeg",
+        avatar: "../Images/image.jpeg",
         name: "Martha Akinlolu",
-        image: "image.jpeg"
+        image: "../Images/image.jpeg"
     },
 
     {
-        avatar: "you.jpg",
+        avatar: "../Images/you.jpg",
         name: "Mary Ojo",
-        image: "you.jpg"
+        image: "../Images/you.jpg"
     },
 
     {
-        avatar: "you.jpg",
+        avatar: "../Images/you.jpg",
         name: "Martha Akinlolu",
-        image: "you.jpg"
+        image: "../Images/you.jpg"
     },
 
     {
-        avatar: "me.jpg",
+        avatar: "../Images/me.jpg",
         name: "Mary Ojo",
-        image: "me.jpg"
+        image: "../Images/me.jpg"
     }
 
 ]
