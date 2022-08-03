@@ -34,7 +34,7 @@ function FileUploader() {
           <div className="upload-file">
             <input type="file" name="file" onChange={changeHandler}/>
           </div>
-          <Button onClick={handleSubmission}>UPLOAD</Button>
+          <Button variant="contained" onClick={handleSubmission}>UPLOAD</Button>
         </form>
       </Container>
     )

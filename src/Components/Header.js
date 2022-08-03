@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Container, Grid, Avatar, Button } from '@mui/material';
+import { AppBar, Container, Grid, Avatar, Button, Tooltip, IconButton} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
@@ -49,7 +49,9 @@ export default function Header() {
           },
         },
       }));
-      
+      const handleClick = () => {
+        
+      };
     return(
         <AppBar position="static">
           <Container maxWidth="xl" className="container">
@@ -75,7 +77,15 @@ export default function Header() {
                   </NavLink>
                 </Grid>
                 <Grid item xs={2}>
-                  <Avatar alt="Martha" src="../Images/avatar.jpg" />
+                  <Tooltip title="Martha Akinlolu">
+                    <IconButton
+                      onClick={handleClick}
+                      size="small"
+                      sx={{ ml: 2 }}
+                    >
+                      <Avatar alt="Martha" src="../Images/avatar.jpg" />
+                    </IconButton>
+                  </Tooltip>
                 </Grid>
               </Grid>
             </Toolbar>
