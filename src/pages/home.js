@@ -1,30 +1,22 @@
 import React from "react"
-import {data} from "../Data"
 import { Container } from "@mui/material"
 import Card from '../Components/card'
 
 
-export default function Home() {
-    const cards = data.map(item => {
-        return(
-        <Card 
-            avatar = {item.avatar}
-            name = {item.name}
-            image= {item.image}
-        />
-        )
-    })
+export default function Home(props) {
+    const {images} = props;
+ 
     return(
         <Container className="cards">
             <div className="card-segment">
-                {cards}
-                {/* {data.map(res =>
-                    (<Card 
-                                avatar = {res.avatar}
-                                name = {res.name}
-                                image= {res.image}
-                            />)
-                )} */}
+             
+                {images.map(item => (  <Card 
+            avatar = {item.avatar}
+            name = {item.name}
+            image= {item.image}
+        />))
+
+                }
             </div>
         </Container>
     )

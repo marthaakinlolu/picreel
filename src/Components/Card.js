@@ -16,6 +16,7 @@ export default function card({avatar,name,image}) {
                 subheader={date}
             />
             <CardMedia
+            style={{width:"250px"}}
                 component="img"
                 height="194"
                 image={image}
@@ -23,12 +24,12 @@ export default function card({avatar,name,image}) {
             />
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                    <Badge badgeContent={2} color="secondary">
+                    <Badge badgeContent={2} color="secondary" sx={{ "& .MuiBadge-badge": { fontSize: 8, height: 15, minWidth: 15 } }}>
                         <FavoriteIcon />
                     </Badge>
                 </IconButton>
                 <IconButton aria-label="comment">
-                    <Badge badgeContent={4} color="secondary">
+                    <Badge badgeContent={4} color="secondary" sx={{ "& .MuiBadge-badge": { fontSize: 8, height: 15, minWidth: 15 } }}>
                         <Comment />
                     </Badge>
                 </IconButton>

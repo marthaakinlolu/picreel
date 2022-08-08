@@ -1,42 +1,27 @@
-import React, {useState} from "react";
+import FileBase from 'react-file-base64'
+import { useNavigate } from 'react-router-dom'
 import { Button, Container } from "@mui/material";
 
 
-function FileUploader() {
-  const [selectedFile, setSelectedFile] = useState()
-  const changeHandler = (event) => {
-		setSelectedFile(event.target.files[0]);
-	};
-  const handleSubmission = () => {
-    const formData = new FormData();
-
-		formData.append('File', selectedFile);
-
-		fetch(
-			'https://freeimage.host/api/1/upload?key=6d207e02198a847aa98d0a2a901485a5',
-			{
-				method: 'POST',
-				body: formData,
-			}
-		)
-			.then((response) => response.json())
-			.then((result) => {
-				console.log('Success:', result);
-			})
-			.catch((error) => {
-				console.error('Error:', error);
-			});
-	};
+export default function FileUploader (props) {
+	const {images, setImages} = props;
+	const history = useNavigate();
+	const handleSubmit = () => {
+		history("/");
+	}
     return(
       <Container className="upload-cont">
         <h2 classname="title">UPLOAD YOUR IMAGE</h2>
         <form className="form">
           <div className="upload-file">
-            <input type="file" name="file" onChange={changeHandler}/>
+            <FileBase type="file"  
+					onDone={({base64}) => {
+						setImages([...images,{ avatar:base64, name:"Martha Tosin 45", image:base64}])}
+					}
+			/>
           </div>
-          <Button variant="contained" onClick={handleSubmission}>UPLOAD</Button>
+          <Button variant="contained" onClick={handleSubmit}>UPLOAD</Button>
         </form>
       </Container>
     )
   }
-  export default FileUploader;

@@ -58,7 +58,9 @@ export default function Header() {
             <Toolbar>
               <Grid container spacing={2}>
                 <Grid item xs={3}>
-                  <img src="../Images/logo.PNG" alt="picreel-logo" width='80px' className="logo"/>
+                  <NavLink to="/">
+                    <img src="../Images/logo.PNG" alt="picreel-logo" width='80px' className="logo"/>
+                  </NavLink>
                 </Grid>
                 <Grid item xs={4}>
                   <Search>
