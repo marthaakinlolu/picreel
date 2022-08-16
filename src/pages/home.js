@@ -11,9 +11,9 @@ export default function Home(props) {
             <div className="card-segment">
              
                 {images.map(item => (  <Card 
-            avatar = {item.avatar}
-            name = {item.name}
-            image= {item.image}
+                    avatar = {item.avatar}
+                    name = {item.name}
+                    image= {item.image}
         />))
 
                 }

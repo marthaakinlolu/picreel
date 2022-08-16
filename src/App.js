@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header images={images}/>
         <Routes>
           <Route path="/" element={<Home images={images}/>}></Route>
           <Route path="uploadfile" element={<FileUploader images={images} setImages={setImages}/>}></Route>
