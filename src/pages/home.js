@@ -14,7 +14,7 @@ export default function Home(props) {
                     avatar = {item.avatar}
                     name = {item.name}
                     image= {item.image}
-        />))
+                    />))
 
                 }
             </div>

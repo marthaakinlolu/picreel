@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 
-export default function SearchBar() {
+export default function SearchBar({placeholder, images, setImages}) {
+    const [filteredData, setFilteredData] = useState([])
+    const handleFilter =  (event) =>{
+         const searchWord = event.target.value
+         const newFilter= images.filter((value) => value.name.toLowerCase().includes(searchWord.toLowerCase()));
+         console.log(newFilter)
+        //  if (searchWord === "") {
+        //     setFilteredData([]);
+        //  } else {
+        //     setFilteredData(newFilter);
+        //  }
+    };
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -43,6 +54,7 @@ export default function SearchBar() {
           },
         },
       }));
+      
 
       return (
         <Search>
@@ -50,8 +62,9 @@ export default function SearchBar() {
                       <SearchIcon />
                       </SearchIconWrapper>
                       <StyledInputBase
-                        placeholder="Search…"
+                        placeholder={placeholder}
                         inputProps={{ 'aria-label': 'search' }}
+                        onChange={handleFilter}
                       />
         </Search>
       )
