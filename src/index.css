@@ -58,3 +58,29 @@ code {
   align-items: center;
   
 }
+.searchBar {
+  margin-top: 8px;
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+.search-icon {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 14px;
+  color: #0583d2;
+}
+.search {
+  border: 1px solid seashell;
+  border-radius: 4px;
+  height: 30px;
+  width: 80%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+.search:hover, .search:focus {
+  border: 1.5px solid #0583d2;
+  background-color: white;
+}

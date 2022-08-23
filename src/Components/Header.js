@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 
 
 
-export default function Header({images, setImages}) {
+export default function Header({setSearch}) {
 
   
       const handleClick = () => {
@@ -24,7 +24,7 @@ export default function Header({images, setImages}) {
                   </NavLink>
                 </Grid>
                 <Grid item xs={4}>
-                  <SearchBar placeholder="Search User" images={images} setImages={setImages}/>
+                  <SearchBar placeholder="Search User" setSearch={setSearch}/>
                 </Grid>
                 <Grid item xs={3}>
                   <NavLink to="/uploadFile" className="link-style">

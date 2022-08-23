@@ -15,10 +15,10 @@ export default function FileUploader (props) {
         <form className="form">
           <div className="upload-file">
             <FileBase type="file"  
-					onDone={({base64}) => {
-						setImages([...images,{ avatar:base64, name:"Martha Tosin 45", image:base64}])}
-					}
-			/>
+					    onDone={({base64}) => {
+						  setImages([...images,{ avatar:base64, name:"Martha Tosin", image:base64}])}
+					    }
+			      />
           </div>
           <Button variant="contained" onClick={handleSubmit}>UPLOAD</Button>
         </form>
