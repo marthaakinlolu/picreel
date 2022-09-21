@@ -5,7 +5,7 @@ import Card from '../Components/card'
 
 export default function Home(props) {
     const {images} = props;
- 
+   
     return(
         <Container className="cards">
             <div className="card-segment">

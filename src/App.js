@@ -4,14 +4,21 @@ import Home from './pages/home'
 import Footer from './Components/Footer'
 import FileUploader from './pages/uploadFile'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { data } from './Data'
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from './actions/post';
+
 
 
 function App() {
  const [images, setImages]= useState([]);
  const [search, setSearch] = useState("")
- useEffect(()=> setImages(data), [])
- const filterData = search==="" ? images : images.filter((value) => value.name.toLowerCase().includes(search.toLowerCase()));
+ const dispatch = useDispatch()
+ useEffect(() => {
+  dispatch(getPosts());
+  }, [dispatch]);
+  const data = useSelector((state) => state.posts);
+ //useEffect(()=> setImages(data), [])
+ const filterData = search==="" ? data : data.filter((value) => value.name.toLowerCase().includes(search.toLowerCase()));
 
  
   return (
