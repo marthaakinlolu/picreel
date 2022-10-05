@@ -1,0 +1,15 @@
+{
+  "name": "picreel",
+  "version": "1.0.0",
+  "description": "gallery app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.5"
+  }
+}
