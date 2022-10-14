@@ -1,4 +1,5 @@
 import { data } from '../Data'
+import api from "../api/index"
 
 
 export const getPosts = () => async (dispatch) => {
@@ -12,8 +13,8 @@ export const getPosts = () => async (dispatch) => {
 
   export const createPost = (newData) => async (dispatch) => {
     try {  
-      console.log(newData, "newData")
-      dispatch({ type: "CREATE_POST", payload: newData});
+      const { data } = await api.createPost(newData);
+      dispatch({ type: "CREATE_POST", payload: data });
     } catch (err) {
       console.log(err.message);
     }

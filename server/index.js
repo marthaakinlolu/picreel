@@ -18,7 +18,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 // app.get("/", (req, res) => {
 //     res.send("Welcome to Picreel");
 //   });
-app.post("/post", async(req, res) => {
+app.post("/posts", async(req, res) => {
   console.log(req)
   const {file } = req.body;
   const newPost = await new Post({file:file });
